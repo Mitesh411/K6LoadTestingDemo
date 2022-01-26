@@ -6,6 +6,7 @@ export const options = {
   vus: 50,
 };
 
+
 export default function () {
   http.get('http://test.k6.io/contacts.php');
   sleep(3);
