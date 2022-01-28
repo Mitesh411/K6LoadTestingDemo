@@ -1,5 +1,6 @@
 import { sleep } from 'k6';
 import http from 'k6/http';
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 
 export const options = {
   duration: '1m',
@@ -12,4 +13,10 @@ export const options = {
 export default function () {
   http.get('http://test.k6.io/contacts.php');
   sleep(3);
+}
+
+export function handleSummary(data) {
+  return {
+    "summary.html": htmlReport(data),
+  };
 }
