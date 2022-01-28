@@ -46,3 +46,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+     # Upload the contents of Test Results directory to workspace
+      - name: Output the run Details
+        uses: actions/upload-artifact@v2
+        with:
+          name: RunReports
+          path: testResults     
