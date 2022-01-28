@@ -1,6 +1,6 @@
 [![CI](https://github.com/Mitesh411/K6LoadTestingDemo/actions/workflows/main.yml/badge.svg)](https://github.com/Mitesh411/K6LoadTestingDemo/actions/workflows/main.yml)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-f0db4f?&style=for-the-badge&logo=JavaScript&logoColor=black)
-<p align="center"><a href="https://k6.io/"><img src="/k6-logo-with-grafana.svg" alt="k6" width="258" height="210" /></a></p>
+<p align="center"><a href="https://k6.io/"><img src="/logo.svg" alt="k6" width="258" height="210" /></a></p>
 
 
 <h3 align="center">Like unit testing, for performance</h3>
