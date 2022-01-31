@@ -1,6 +1,9 @@
 import { sleep, group } from 'k6'
 import http from 'k6/http'
-import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/2.3.1/dist/bundle.js";
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
+import { textSummary } from "https://jslib.k6.io/k6-summary/0.0.1/index.js";
+
+
 
 export const options = { vus: 5, duration: '1m' }
 
@@ -25,6 +28,7 @@ export default function main() {
 
 export function handleSummary(data) {
   return {
-    "summary.html": htmlReport(data),
+    "result.html": htmlReport(data),
+    stdout: textSummary(data, { indent: " ", enableColors: true }),
   };
 }
