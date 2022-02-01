@@ -11,7 +11,7 @@ export default function main() {
   let response
 
   group('page_1 - https://letcode.in/', function () {
-    response = http.get('https://letcode.in/', {
+    response = http.get('https://test.k6.io', {
       headers: {
         'upgrade-insecure-requests': '1',
         'sec-ch-ua': '" Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"',
