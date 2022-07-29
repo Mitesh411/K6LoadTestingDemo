@@ -28,8 +28,8 @@ jobs:
           filename: performance-test.js
      
       - name: Run k6 cloud test
-        uses: grafana/k6-action@v0.2.0
+        uses: k6io/action@v0.1
         with:
-          filename: cloud/script.js
+          filename: performance-test.js
           cloud: true
           token: ${{ secrets.K6_CLOUD_API_TOKEN }}
