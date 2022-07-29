@@ -27,9 +27,13 @@ jobs:
         with:
           filename: performance-test.js
      
-      - name: Run k6 cloud test
-        uses: k6io/action@v0.1
+      # Provide CHMOD Permission to results folder
+      - name: Make Directory for results
+        run: chmod -R 777 result.html
+     
+     # Upload the contents of Test Results directory to workspace
+      - name: Output the run Details
+        uses: actions/upload-artifact@v2
         with:
-          filename: performance-test.js
-          cloud: true
-          token: ${{ secrets.K6_CLOUD_API_TOKEN }}
+          name: RunReports
+          path: ./result.html   
