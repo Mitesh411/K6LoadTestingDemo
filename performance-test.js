@@ -5,7 +5,7 @@ import { textSummary } from "https://jslib.k6.io/k6-summary/0.0.1/index.js";
 
 
 
-export const options = { vus: 1, 
+export const options = { vus: 300, 
                         duration: '1m' ,
                          insecureSkipTLSVerify: true
                        }
